@@ -1,0 +1,8 @@
+docker run --name=db --rm -d \
+-e MARIADB_ROOT_PASSWORD=root \
+-e MYSQL_DATABASE=app \
+-e MYSQL_USER=app \
+-e MYSQL_PASSWORD=app \
+--network lab2network \
+-v db:/var/lib/mysql \
+-p 3306:3306 mariadb
